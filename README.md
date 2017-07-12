@@ -27,6 +27,8 @@ pip install cloudpassage
 
 3. Add the SVA key you want to match on (example format: sva::::bash)
 
+4. (optional) Change the default url for the API.
+
 ### Run
 
 ```
