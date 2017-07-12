@@ -8,4 +8,5 @@ class ConfigHelper(object):
       def __init__(self):
           self.halo_key = CONFIG["halo"]["api_key"]
           self.halo_secret = CONFIG["halo"]["api_secret_key"]
+          self.halo_url = CONFIG["halo"]["url"]
           self.key = CONFIG["halo"]["key"]

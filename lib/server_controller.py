@@ -5,7 +5,8 @@ import cloudpassage
 class ServerController(object):
     def __init__(self, config):
         session = cloudpassage.HaloSession(config.halo_key,
-                                           config.halo_secret)
+                                           config.halo_secret,
+                                           api_host=config.url)
         self.server_obj = cloudpassage.Server(session)
         self.request_obj = cloudpassage.HttpHelper(session)
         self.sva_key = config.key
