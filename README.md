@@ -25,7 +25,7 @@ pip install cloudpassage
 
 2. Fill out you halo api key pair
 
-3. Add the SVA key you want to match on (format: sva::::bash)
+3. Add the SVA key you want to match on (example format: sva::::bash)
 
 ### Run
 
