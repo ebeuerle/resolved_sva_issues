@@ -1,5 +1,5 @@
 halo:
   api_key: 
   api_secret_key: 
-  url:
-  key: sva::::bash
+  url: api.cloudpassage.com #only use the fqdn form of the url (not https://)
+  key: sva::::bash # use a valid rule_key for SVA: https://api-doc.cloudpassage.com/help#issues
