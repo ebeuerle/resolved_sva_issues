@@ -15,14 +15,14 @@ class ServerController(object):
         result = []
         iteration = int(math.ceil(count / 100.0)) + 1
         for page in range(2, iteration):
-            endpoint = "/v2/servers?state=active&rule_key=%s&per_page=100&page=%s" % (self.sva_key, page)
+            endpoint = "/v2/servers?state=active&status=resolved&rule_key=%s&per_page=100&page=%s" % (self.sva_key, page)
             sva_issues = self.request_obj.get(endpoint)
             result.extend(sva_issues["servers"])
         return result
 
     def get_sva_issues(self):
         result = []
-        endpoint = "/v2/servers?state=active&rule_key=%s" % (self.sva_key)
+        endpoint = "/v2/servers?state=active&status=resolved&rule_key=%s" % (self.sva_key)
         sva_issues = self.request_obj.get(endpoint)
         result.extend(sva_issues["servers"])
         if sva_issues["count"] > 100:
