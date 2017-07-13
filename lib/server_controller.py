@@ -22,7 +22,7 @@ class ServerController(object):
 
     def get_sva_issues(self):
         result = []
-        endpoint = "/v2/servers?state=active&status=resolved&rule_key=%s" % (self.sva_key)
+        endpoint = "/v2/servers?state=active&status=resolved&per_page=100&rule_key=%s" % (self.sva_key)
         sva_issues = self.request_obj.get(endpoint)
         result.extend(sva_issues["servers"])
         if sva_issues["count"] > 100:
