@@ -11,7 +11,7 @@ class ServerController(object):
         self.request_obj = cloudpassage.HttpHelper(session)
         self.sva_key = config.key
 
-    def get_sva_issues_pag(self, count):
+    def get_sva_issues_pag(self, count, self.sva_key):
         result = []
         iteration = int(math.ceil(count / 100.0)) + 1
         for page in range(2, iteration):
